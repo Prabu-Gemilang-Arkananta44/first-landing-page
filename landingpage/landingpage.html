@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LANDING PAGE - Verontera Engineer</title>
+  <link rel="icon" type="image/jpg" href="images/logo.jpg">
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(180deg, #0b132b, #1c2541, #3a506b, #5bc0be, #6fffe9);
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav {
+      width: 100%;
+      height: 70px;
+      background: linear-gradient(90deg, rgba(14, 22, 56, 0.9), rgba(37, 117, 252, 0.5));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 80px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    img.logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand {
+      font-weight: 900;
+      font-size: 16px;
+      color: #6fffe9;
+      text-shadow: 0 0 10px #6fffe9;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    nav ul li a:hover {
+      color: #6fffe9;
+      border-bottom: 3px solid #6fffe9;
+    }
+
+    button {
+      background: linear-gradient(90deg, #5bc0be, #6fffe9);
+      color: #0b132b;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(111, 255, 233, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(111, 255, 233, 0.8);
+    }
+
+    .content1 {
+      padding: 80px 100px;
+      text-align: center;
+    }
+
+    .judul1 {
+      font-size: 38px;
+      font-weight: 900;
+      color: #6fffe9;
+      text-shadow: 0 0 15px rgba(111, 255, 233, 0.8);
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .isi1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .isi1 p {
+      max-width: 800px;
+      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(91, 192, 190, 0.4);
+      color: #d9f9f8;
+    }
+
+    img.ds {
+      width: 400px;
+      height: 400px;
+    }
+
+    .content2 {
+      background: linear-gradient(135deg, #0b132b, #1c2541, #3a506b, #5bc0be);
+      padding: 80px 100px;
+    }
+
+    .judul2 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #6fffe9;
+      margin-bottom: 40px;
+    }
+
+    .isi2 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .isi2 p {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      padding: 20px 25px;
+      border-radius: 15px;
+      color: #e6fffd;
+      box-shadow: 0 0 20px rgba(111, 255, 233, 0.4);
+      line-height: 1.6;
+    }
+
+    img.cyber {
+      width: 400px;
+      height: 400px;
+    }
+
+    .content3 {
+      background: linear-gradient(135deg, #3a0ca3, #7209b7, #4361ee, #4cc9f0);
+      padding: 80px 100px;
+    }
+
+    .judul3 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 40px;
+      text-shadow: 0 0 15px #a3e4ff;
+    }
+
+    .isi3 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .isi3 p {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px 25px;
+      border-radius: 15px;
+      color: #f5efff;
+      box-shadow: 0 0 20px rgba(160, 100, 255, 0.4);
+      line-height: 1.6;
+    }
+
+    img.ai {
+      width: 400px;
+      height: 400px;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #0b132b, #1c2541);
+      color: #6fffe9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+      gap: 15px;
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    footer h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .aboutus ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .aboutus ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .aboutus ul li a:hover {
+      color: #6fffe9;
+    }
+
+    .copyright {
+      font-size: 14px;
+      color: #a8dadc;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo-container">
+      <img src="images/reverselogoo.png" alt="Logo" class="logo">
+      <p class="brand">VERONTERA <br> ENGINEER</p>
+    </div>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">ABOUT</a></li>
+      <li><a href="#">INFO</a></li>
+      <li><a href="#">CONTACT</a></li>
+    </ul>
+    <button>JOIN US</button>
+  </nav>
+
+  <div class="content1">
+    <h1 class="judul1">WHAT IS VERONTERA ENGINEER?</h1>
+    <div class="isi1">
+      <p>Verontera Engineer adalah organisasi inovatif yang berfokus pada pengembangan solusi teknologi tinggi di bidang keamanan siber dan kecerdasan buatan. Kami berkomitmen untuk membangun ekosistem digital yang aman dan cerdas dengan menghadirkan teknologi yang melindungi serta memperkuat masa depan digital.</p>
+      <img src="images/data-storage-3-17.png" alt="ds" class="ds">
+    </div>
+  </div>
+
+  <div class="content2">
+    <h1 class="judul2">CYBER SECURITY</h1>
+    <div class="isi2">
+      <div>
+        <p>Cybersecurity adalah upaya melindungi sistem komputer, jaringan, dan data dari serangan digital. Tujuannya menjaga kerahasiaan, integritas, dan ketersediaan informasi agar tidak disalahgunakan oleh pihak yang tidak bertanggung jawab.</p>
+        <br>
+        <p>Langkah-langkah seperti enkripsi, pembaruan sistem, serta pelatihan keamanan menjadi bagian penting dalam strategi melawan ancaman digital di era modern ini.</p>
+      </div>
+      <img src="images/cybersecurity-1-1.png" alt="cybersecurity" class="cyber">
+    </div>
+  </div>
+
+  <div class="content3">
+    <h1 class="judul3">ARTIFICIAL INTELLIGENCE</h1>
+    <div class="isi3">
+      <img src="images/artificial-intelligence-34.png" alt="ai" class="ai">
+      <div>
+        <p>Artificial Intelligence (AI) adalah cabang ilmu komputer yang menciptakan sistem yang mampu meniru kecerdasan manusia. AI dapat mengenali pola, belajar dari data, dan mengambil keputusan cerdas.</p>
+        <br>
+        <p>AI telah digunakan di berbagai bidang — mulai dari kesehatan, transportasi, hingga industri kreatif — untuk meningkatkan efisiensi dan menciptakan inovasi baru bagi kehidupan manusia.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="cu">
+      <h2>CONTACT US</h2>
+    </div>
+    <div class="aboutus">
+      <ul>
+        <li><a href="#">EMAIL</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">INSTAGRAM</a></li>
+        <li><a href="#">FACEBOOK</a></li>
+      </ul>
+    </div>
+    <div class="copyright">
+      <p>© All Rights Reserved 2025</p>
+    </div>
+  </footer>
+</body>
+</html>
